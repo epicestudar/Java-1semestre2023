@@ -2,6 +2,8 @@ package IteracaoFor;
 
 import java.util.Scanner;
 
+import javax.print.attribute.standard.Media;
+
 public class ExemploFor {
     Scanner sc = new Scanner(System.in);
 
@@ -133,5 +135,29 @@ public class ExemploFor {
                 System.out.println("vetor["+i+"]=" + nImpar[i]);
             }
         }
+
+        public void exercicio6() {
+            double notas[] = new double[4];
+            double medias[]= new double[10];
+            double media;
+
+            for (int i = 0; i < notas.length; i++) {
+                System.out.println("Nota["+i+"]=");
+                notas[i] = sc.nextDouble();
+            }
+            for (int i = 0; i < medias.length; i++) {
+                System.out.println("Média=" + notas[i]);
+                medias[i] = sc.nextDouble();
+                media = (notas[0] + notas[1] + notas[2] + notas[3]) / 4;
+                if( media>=7) {
+                    System.out.println("O aluno passou");
+                }
+                else{
+                    System.out.println("O aluno não passou");
+                }
+                System.out.println("Sua média é " + media);
+            }
+        }
+
     }
 
