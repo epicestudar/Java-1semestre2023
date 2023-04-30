@@ -137,27 +137,74 @@ public class ExemploFor {
         }
 
         public void exercicio6() {
-            double notas[] = new double[4];
-            double medias[]= new double[10];
-            double media;
+            double[][] total = new double[10][4];
+            double[] medias = new double[10];
+            double[] notas = new double[4];
+            int alunos=0;
+            double media=0;
 
-            for (int i = 0; i < notas.length; i++) {
-                System.out.println("Nota["+i+"]=");
-                notas[i] = sc.nextDouble();
+            for (int i = 0; i < total.length; i++) {
+                System.out.println("Digite as quatro notas do aluno " + (i+1) + ":" );
+                for (int j = 0; j < 4; j++) {
+                    total[i][j] = sc.nextDouble();
+                    notas[i] += total[i][j];
+                }
+                medias[i] = notas[i]/4;
             }
+
             for (int i = 0; i < medias.length; i++) {
-                System.out.println("Média=" + notas[i]);
-                medias[i] = sc.nextDouble();
-                media = (notas[0] + notas[1] + notas[2] + notas[3]) / 4;
-                if( media>=7) {
-                    System.out.println("O aluno passou");
+                if(medias[i] >=7) {
+                    alunos++;
                 }
-                else{
-                    System.out.println("O aluno não passou");
-                }
-                System.out.println("Sua média é " + media);
+            }
+            System.out.println("Número de alunos com média maior ou igual a 7: " + alunos);
+        }
+
+        public void exercicio7() {
+            int[] vetorA = new int[5];
+            int[] totalSoma = new int[5];
+            int[] totalMult = new int[5];
+
+            for (int i = 0; i < vetorA.length; i++) {
+                System.out.println("Informe o número " + (i+1) + ":");
+                vetorA[i] = sc.nextInt();
+            }
+
+            for (int i = 0; i < totalSoma.length; i++) {
+                totalSoma[i] = vetorA[i] + vetorA[i];
+            }
+
+            for (int i = 0; i < totalMult.length; i++) {
+                totalMult[i] = vetorA[i] * vetorA[i];
+            }
+            System.out.println("Os valores que você informou: ");
+
+            for (int i = 0; i < vetorA.length; i++) {
+                System.out.println((i+1) + "º: " + vetorA[i]);
+            }
+
+            System.out.println("A soma dos vetores: "); 
+            for (int i = 0; i < vetorA.length; i++) {
+                System.out.println((i+1) + "º: " + totalSoma[i]);
+            }
+
+            System.out.println("A multiplicação dos vetores ");
+            for (int i = 0; i < vetorA.length; i++) {
+                System.out.println((i+1) + "º: " + totalMult[i]);
             }
         }
 
+        public void exercicio8() {
+            int vetorPessoas[] = new int[5];
+            double altura[] = new double[5];
+            int idade[] = new int[5];
+
+            for (int i = 0; i < vetorPessoas.length; i++) {
+                System.out.println("Digite a idade da pessoa " + (i+1) + ":");
+                idade[i] = sc.nextInt();
+                System.out.println("Informe a altura da pessoa " + (i+1) + ":");
+                altura[i] = sc.nextDouble();
+            }
+        }
     }
 
