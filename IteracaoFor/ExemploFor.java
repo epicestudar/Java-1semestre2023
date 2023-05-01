@@ -137,27 +137,28 @@ public class ExemploFor {
         }
 
         public void exercicio6() {
-            double[][] total = new double[10][4];
-            double[] medias = new double[10];
+            double[] alunos = new double[10];
             double[] notas = new double[4];
-            int alunos=0;
-            double media=0;
+            int cont = 0;
 
-            for (int i = 0; i < total.length; i++) {
-                System.out.println("Digite as quatro notas do aluno " + (i+1) + ":" );
-                for (int j = 0; j < 4; j++) {
-                    total[i][j] = sc.nextDouble();
-                    notas[i] += total[i][j];
+            for (int i = 0; i < notas.length; i++) {
+                for (int j = 0; j < notas.length; j++) {
+                    System.out.println("Digite a nota "+(j+1)+" do aluno "+ (i+1) + ":");
+                    notas[i] = sc.nextDouble();
+                    alunos[i] += notas[j];
                 }
-                medias[i] = notas[i]/4;
-            }
+                alunos[i] /= notas.length;
 
-            for (int i = 0; i < medias.length; i++) {
-                if(medias[i] >=7) {
-                    alunos++;
+                if (notas[i] >= 7) {
+                    cont++;
                 }
             }
-            System.out.println("Número de alunos com média maior ou igual a 7: " + alunos);
+            System.out.println("N° de alunos com média maior ou igual a 7: " + cont);
+            System.out.println("");
+            for (int i = 0; i < alunos.length; i++) {
+                System.out.println("A média do aluno "+(i+1)+" é"+ alunos[i]);
+            }
+            System.out.println("");
         }
 
         public void exercicio7() {
@@ -204,6 +205,31 @@ public class ExemploFor {
                 idade[i] = sc.nextInt();
                 System.out.println("Informe a altura da pessoa " + (i+1) + ":");
                 altura[i] = sc.nextDouble();
+            }
+        }
+
+        public void exercicio9() {
+            int[] vetor = new int[10];
+            int[] vetorQuad = new int[10];
+            int[] vetorTotal = new int[10];
+            int j=0;
+
+            for (int i = 0; i < vetor.length; i++) {
+                System.out.println("Informe para o vetor de índice " + (i+1) + ":");
+                vetor[i] = sc.nextInt();
+            }
+
+            for (int i = 0; i < vetor.length; i++) {
+                vetorQuad[i] = (int) Math.pow(vetor[i], 2);
+            }
+            for (int i = 0; i < vetor.length; i++) {
+                vetorTotal[i] = vetorQuad[i] + vetorQuad[i];
+            }
+
+            System.out.println("A soma dos quadrados para cada elemento será: ");
+            for (int i = 0; i < vetor.length; i++) {
+                j++;
+                System.out.println(j + "° " + vetorTotal[i]);
             }
         }
     }
