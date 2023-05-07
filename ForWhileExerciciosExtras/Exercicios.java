@@ -97,4 +97,66 @@ public class Exercicios {
             }
         }
     }
-}
+
+    public void exercicio3() {
+        int anos=0;
+        double taxaA = 0.03, taxaB = 0.015;
+        double paisA = 80000, paisB = 200000;
+
+        System.out.println("================================");
+        System.out.println("População do país A: " + paisA + "habitantes");
+        System.out.println("");
+        System.out.println("População do país B: " + paisB + "habitantes");
+        System.out.println("");
+        System.out.println("================================");
+
+        while(paisA < paisB) {
+          paisA = paisA + (paisA * taxaA);
+          paisB = paisB + (paisB * taxaB);
+          anos++;
+        }
+        System.out.println("================================");
+        System.out.println("");
+        System.out.println("A quantidade de anos para o país A ultrapassar o país B em n° de habitantes é: " + anos + "anos");
+        System.out.println("");
+        System.out.println("================================");
+    }
+
+    public void exercicio4() {
+        double paisA, paisB, taxaA, taxaB;
+        int anos = 0;
+        boolean verdadeiro = true;
+
+        System.out.println("==================================================================");
+        System.out.println("Informe o total de habitantes do país A: ");
+        paisA = sc.nextDouble();
+        System.out.println("Informe a taxa de crescimento do país A: ");
+        taxaA = sc.nextDouble();
+        System.out.println("Informe o total de habitantes do país B: ");
+        paisB = sc.nextDouble();
+        System.out.println("Informe a taxa de crescimento do país B: ");
+        taxaB = sc.nextDouble();
+
+        while(verdadeiro) {
+            paisA = paisA + (paisA * taxaA);
+          paisB = paisB + (paisB * taxaB);
+          anos++;
+
+          if(paisA > paisB && taxaA > taxaB) {
+            System.out.println("O país B nunca alcançará ou ultrapassará o país A em n° de habitantes");
+          }
+          else if(paisA > paisB && taxaA < taxaB) {
+            System.out.println("O país B alcancará o país A em " + anos + "anos");
+          }
+          else if(paisB > paisA && taxaB > taxaA) {
+            System.out.println("O país A nunca alcançará o país B");
+            }
+            else if(paisB > paisA && taxaB < taxaA) {
+                System.out.println("O país A alcançará o país B em " + anos + "anos");
+            }
+            else {
+                verdadeiro = false;
+            }
+        }
+        }      
+    }
