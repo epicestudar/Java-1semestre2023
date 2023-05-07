@@ -125,7 +125,6 @@ public class Exercicios {
     public void exercicio4() {
         double paisA, paisB, taxaA, taxaB;
         int anos = 0;
-        boolean verdadeiro = true;
 
         System.out.println("==================================================================");
         System.out.println("Informe o total de habitantes do país A: ");
@@ -136,27 +135,38 @@ public class Exercicios {
         paisB = sc.nextDouble();
         System.out.println("Informe a taxa de crescimento do país B: ");
         taxaB = sc.nextDouble();
+        System.out.println("==================================================================");
 
-        while(verdadeiro) {
+        while(paisA<paisB) {
             paisA = paisA + (paisA * taxaA);
           paisB = paisB + (paisB * taxaB);
           anos++;
 
-          if(paisA > paisB && taxaA > taxaB) {
-            System.out.println("O país B nunca alcançará ou ultrapassará o país A em n° de habitantes");
-          }
-          else if(paisA > paisB && taxaA < taxaB) {
-            System.out.println("O país B alcancará o país A em " + anos + "anos");
-          }
-          else if(paisB > paisA && taxaB > taxaA) {
-            System.out.println("O país A nunca alcançará o país B");
-            }
-            else if(paisB > paisA && taxaB < taxaA) {
-                System.out.println("O país A alcançará o país B em " + anos + "anos");
-            }
-            else {
-                verdadeiro = false;
-            }
         }
-        }      
+
+        System.out.println("Levará " + anos + "anos para o país A ultrapassar o país B");
+        System.out.println("Populaçao A -->" + paisA + "habitantes");
+        System.out.println("População B -->" + paisB + "habitantes");
+        }  
+        
+        public void exercicio5() {
+            double vetorNumeros[] = new double[8];
+            double maior=0;
+
+            System.out.println("Informe 8 números para o vetor: ");
+
+            for (int i = 0; i < vetorNumeros.length; i++) {
+                System.out.println((i+1) + "° posição ");
+                vetorNumeros[i] = sc.nextDouble();
+            }
+
+            System.out.println("==================================");
+            for (int i = 0; i < vetorNumeros.length; i++) {
+                if(vetorNumeros[i] > maior){
+                    maior = vetorNumeros[i];
+                }
+            }
+
+            System.out.println("O maior n° digitado foi: " + maior);
+        }
     }
