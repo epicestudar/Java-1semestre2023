@@ -84,7 +84,7 @@ public class MatrizExemplo {
         int matriz[][] = new int[5][5];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
-                if(i == j){
+                if(i == j || i+j == 4){ // irá formar um X
                     matriz[i][j] = 1;
                 }
             }
