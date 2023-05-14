@@ -25,7 +25,7 @@ public class Exercicios {
 
     public void exercicio2() {
         int matriz[][] = new int[4][4];
-       int maior=0;
+       int maior= matriz[0][0];
        int posI = 0;
        int posJ = 0;
 
@@ -52,7 +52,7 @@ public class Exercicios {
                 }
             }
         }
-        System.out.println("Maior linha=" + posI );
+        System.out.println("Maior linha=" + posI);
         System.out.println("Maior coluna=" + posJ);
         }
 
@@ -61,7 +61,6 @@ public class Exercicios {
             int x = 0;
             int posI = 0;
             int posJ = 0;
-            boolean verdadeiro;
 
             System.out.println("Digite o valor de x: ");
                     x = sc.nextInt();
@@ -81,14 +80,11 @@ public class Exercicios {
 
             for (int i = 0; i < matriz.length; i++) {
                 for (int j = 0; j < matriz.length; j++) {
-                    if(i == x || j == x) {
+                    if(x == i || x == j) {
                         x = matriz[i][j];
                         posI = i + 1;
-                    posJ = j + 1;
-                    }
-
-                    else {
-                        verdadeiro = false;
+                        posJ = j + 1;
+                       
                     }
                 }
             }
@@ -130,6 +126,63 @@ public class Exercicios {
                 System.out.println("|");
             }
         }
+
+        public void exercicio5() {
+            int matriz[][] = new int[5][4];
+            int alunoUm, alunoDois, alunoTres;
+            int nMatricula;
+
+            System.out.println("Seu n° de matrícula: ");
+                    alunoUm = sc.nextInt();
+                    nMatricula = sc.nextInt();
+                    System.out.println("Seu n° de matrícula: ");
+                    alunoDois = sc.nextInt();
+                    nMatricula = sc.nextInt();
+                    System.out.println("Seu n° de matrícula: ");
+                    alunoTres = sc.nextInt();
+                    nMatricula = sc.nextInt();
+
+            for (int i = 0; i < matriz.length; i++) {
+                for (int j = 0; j < matriz[j].length; j++) {
+                    
+                }
+            }
+
+            for (int i = 0; i < matriz.length; i++) {
+                for (int j = 0; j < matriz[j + 1].length; j++) {
+                    System.out.println("Fodaseeeeeee");
+                }
+            }
+        }
+
+        public void exercicio5Ex() {
+            double id = 0, maioral = 0;
+		double[][] mat = new double[5][4];
+
+		for (int i = 0; i < 5; i++) {
+			System.out.println("entre com a matricula/ media da prova / media dos trabalhos. do aluno "+ (i+1));
+			for (int j = 0; j < 4; j++) {
+				mat[i][j] = sc.nextDouble();
+				if(j==2) {
+                    mat[i][j+1] =((mat[i][j]+mat[i][j-1])/2);
+                    if(mat[i][j+1]>maioral) 
+                    maioral=mat[i][j+1];j++;}
+				
+			}
+		}
+
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 4; j++) {
+				if (j % 4 == 0)System.out.print("\n");
+				System.out.print(mat[i][j]+"  ");
+				
+				
+
+			}
+		}
+		System.out.println("\na maior nota final: " + maioral);
+		System.out.println(" Matrícula Responsavel: " + id);
+	}
 
         public void exercicio6() {
             int A[][] = new int[3][3];
