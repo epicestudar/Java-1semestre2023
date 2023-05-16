@@ -25,7 +25,7 @@ public class Exercicios {
 
     public void exercicio2() {
         int matriz[][] = new int[4][4];
-       int maior= matriz[0][0];
+       int maior= 0;
        int posI = 0;
        int posJ = 0;
 
@@ -45,31 +45,33 @@ public class Exercicios {
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
-                if(matriz[i][j] > maior) {
+                if(matriz[i][j] >= maior) {
                     maior = matriz[i][j];
-                    posI = i + 1;
-                    posJ = j + 1;
+                    posI = i;
+                    posJ = j;
                 }
             }
         }
-        System.out.println("Maior linha=" + posI);
-        System.out.println("Maior coluna=" + posJ);
+        System.out.println("O maior valor é: " + maior);
+        System.out.println("Localizada na posição ["+ (posI+1) +"]["+ (posJ+1) +"]");
         }
 
         public void exercicio3() {
             int matriz[][] = new int[5][5];
-            int x = 0;
+            int x;
             int posI = 0;
             int posJ = 0;
 
-            System.out.println("Digite o valor de x: ");
-                    x = sc.nextInt();
 
             for (int i = 0; i < matriz.length; i++) {
                 for (int j = 0; j < matriz.length; j++) {
                     matriz[i][j] = rd.nextInt(4);
                 }
             }
+
+            System.out.println("Digite o valor de x: ");
+                    x = sc.nextInt();
+
             for (int i = 0; i < matriz.length; i++) {
                 System.out.print("| ");
                 for (int j = 0; j < matriz.length; j++) {
@@ -80,16 +82,21 @@ public class Exercicios {
 
             for (int i = 0; i < matriz.length; i++) {
                 for (int j = 0; j < matriz.length; j++) {
-                    if(x == i || x == j) {
+                    if(x == matriz[i][j]) {
                         x = matriz[i][j];
-                        posI = i + 1;
-                        posJ = j + 1;
+                        posI = i;
+                        posJ = j;
                        
                     }
                 }
             }
 
-            System.out.println("X está na linha:" + posI + "e na coluna:" + posJ);
+            if (x == 0) {
+                System.out.println("Não encontrado");
+            }
+            else {
+                System.out.println("X foi encontrado em: ["+ (posI+1) +"]["+ (posJ+1) +"]");
+            }
             
         }
 
@@ -128,34 +135,6 @@ public class Exercicios {
         }
 
         public void exercicio5() {
-            int matriz[][] = new int[5][4];
-            int alunoUm, alunoDois, alunoTres;
-            int nMatricula;
-
-            System.out.println("Seu n° de matrícula: ");
-                    alunoUm = sc.nextInt();
-                    nMatricula = sc.nextInt();
-                    System.out.println("Seu n° de matrícula: ");
-                    alunoDois = sc.nextInt();
-                    nMatricula = sc.nextInt();
-                    System.out.println("Seu n° de matrícula: ");
-                    alunoTres = sc.nextInt();
-                    nMatricula = sc.nextInt();
-
-            for (int i = 0; i < matriz.length; i++) {
-                for (int j = 0; j < matriz[j].length; j++) {
-                    
-                }
-            }
-
-            for (int i = 0; i < matriz.length; i++) {
-                for (int j = 0; j < matriz[j + 1].length; j++) {
-                    System.out.println("Fodaseeeeeee");
-                }
-            }
-        }
-
-        public void exercicio5Ex() {
             double id = 0, maioral = 0;
 		double[][] mat = new double[5][4];
 
