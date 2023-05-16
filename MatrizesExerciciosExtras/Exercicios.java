@@ -202,11 +202,11 @@ public class Exercicios {
 
             for (int i = 0; i < C.length; i++) {
                 for (int j = 0; j < C[i].length; j++) {
-                    for (int j2 = 0; j2 < A[i].length; j2++) {
-                        C[i][j] += A[i][j2] * B[i][j2];  
-                    }
+                      for(int k = 0; k < A[i].length; k++){
+                            C[i][j] += A[i][k] * B[k][j];
+                      }
                 }
-            }
+          }
 
             System.out.println("Matriz C: ");
             for (int i = 0; i < C.length; i++) {
