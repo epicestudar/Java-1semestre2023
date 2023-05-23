@@ -18,8 +18,8 @@ public class Exercicios {
 
         matriz = new int[linha][coluna];
 
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < coluna; j++) {
                 matriz[i][j] = rd.nextInt(9);
             }
         }
@@ -27,16 +27,16 @@ public class Exercicios {
 
         System.out.println("Matriz sorteada: ");
 
-        for (int i = 0; i < matriz.length; i++) {
+        for (int i = 0; i < linha; i++) {
             System.out.print("| ");
-            for (int j = 0; j < matriz.length; j++) {
+            for (int j = 0; j < coluna; j++) {
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println("|");
         }
 
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < coluna; j++) {
                 if(i > j) {
                     matriz[i][j] = 1;
                 }
@@ -51,9 +51,9 @@ public class Exercicios {
 
         System.out.println("===========================================================");
         System.out.println("Matriz com as condições:");
-        for (int i = 0; i < matriz.length; i++) {
+        for (int i = 0; i < linha; i++) {
             System.out.print("| ");
-            for (int j = 0; j < matriz.length; j++) {
+            for (int j = 0; j < coluna; j++) {
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println("|");
