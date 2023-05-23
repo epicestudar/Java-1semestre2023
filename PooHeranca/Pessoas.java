@@ -1,6 +1,6 @@
 package PooHeranca;
 
-public class Pessoas {
+public abstract class Pessoas {
     //super classe (fornecer herança para as outras classes
     // atributos genéricos (comuns a todas as classes herdeiras)
     // atributos
