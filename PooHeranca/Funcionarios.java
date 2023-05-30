@@ -5,4 +5,9 @@ public class Funcionarios extends Pessoas{
     // atributos específicos
     private int salario;
     private String empresa;
+    @Override
+    public void setRg() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setRg'");
+    }
 }

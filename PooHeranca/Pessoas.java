@@ -8,8 +8,13 @@ public abstract class Pessoas {
     String endereco;
     int idade;
     String cpf;
+    String rg;
 
-     // métodos
+     public String getRg() {
+        return rg;
+    }
+    public abstract void setRg();
+    // métodos
     public String getNome() {
         return nome;
     }

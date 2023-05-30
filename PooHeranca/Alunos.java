@@ -34,6 +34,15 @@ public class Alunos extends Pessoas {
     public void setTurma(String turma) {
         this.turma = turma;
     }
+    @Override
+    public void setRg() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setRg'");
+    }
+
+    public void setRg(String rg){
+        this.rg = "SP" + "número";
+    }
 
     
 }

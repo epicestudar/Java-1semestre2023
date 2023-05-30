@@ -19,6 +19,11 @@ public class Professores extends Pessoas {
     public void setSalario(int salario) {
         this.salario = salario;
     }
+    @Override
+    public void setRg() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setRg'");
+    }
 
     
 }
