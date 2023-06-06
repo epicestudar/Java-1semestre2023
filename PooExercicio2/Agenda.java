@@ -1,14 +1,29 @@
 package PooExercicio2;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Agenda {
     Scanner sc = new Scanner(System.in);
     // atributos
     String nome;
-    float altura;
+    double altura;
     int idade;
 
     // métodos
+    // construtor com parâmetros
+    public Agenda(String nome, double altura, int idade) {
+        this.nome = nome;
+        this.altura = altura;
+        this.idade = idade;
+    }
+
+    // construtor vazio
+    public Agenda() {
+
+    }
+
+    // getters and setters
     public String getNome() {
         return nome;
     }
@@ -17,11 +32,11 @@ public class Agenda {
         this.nome = nome;
     }
 
-    public float getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(float altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 
@@ -33,40 +48,11 @@ public class Agenda {
         this.idade = idade;
     }
 
-    public void armazenaPessoa() {
-        int cont=0;
+    // métodos de aplicações dievrsas
+    // void
+    
 
-        while(cont < 2) {
-            System.out.println("Informe o seu nome: ");
-            setNome(sc.next());
-            System.out.println("Informe a sua idade: ");
-            setIdade(sc.nextInt());
-            System.out.println("Informe a sua altura: ");
-            setAltura(sc.nextFloat());
-
-            cont++;
-        }
+    public void imprimir() {
+        JOptionPane.showMessageDialog(null, "Nome: " + nome + "\n Altura: " + altura + "\nIdade: " + idade);
     }
-
-   public void buscaPessoa(){
-    String buscaPessoa;
-    System.out.println("Informe o nome da pessoa que quer procurar: ");
-    buscaPessoa = sc.next();
-
-    for (int i = 0; i < 2; i++) {
-        if(getNome().equals(buscaPessoa)){
-            System.out.println("Esta pessoa está na posição: " + (i+1));
-        }
-    }
-   }
-
-   public void imprimeAgenda() {
-    System.out.println("Dados das pessoas das agendas: ");
-
-    for (int i = 0; i < 2; i++) {
-        System.out.println(getNome());
-        System.out.println(getIdade());
-        System.out.println(getAltura());
-    }
-   }
 }
